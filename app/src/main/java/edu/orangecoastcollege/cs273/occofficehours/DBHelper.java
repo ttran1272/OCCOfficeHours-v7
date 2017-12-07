@@ -50,12 +50,6 @@ class DBHelper extends SQLiteOpenHelper {
     private static final String FIELD_R_HOURS= "thursday";
     private static final String FIELD_F_HOURS= "friday";
 
-    /*
-    //TASK: DEFINE THE FIELDS (COLUMN NAMES FOR THE DEPARTMENT TABLE
-    public static final String DEPARTMENT_TABLE = "Departments";
-    public static final String DEPARTMENT_KEY_FIELD_ID = "_id";
-    public static final String FIELD_DEPARTMENT_NAME = "department_name";
-    */
     //TASK: DEFINE THE FIELDS (COLUMN NAMES) FOR THE OFFERINGS TABLE
     private static final String OFFERINGS_TABLE = "Offerings";
     private static final String FIELD_CRN = "crn";
@@ -63,13 +57,6 @@ class DBHelper extends SQLiteOpenHelper {
     private static final String FIELD_COURSE_ID = "course_id";
     private static final String FIELD_INSTRUCTOR_ID = "instructor_id";
 
-    /*
-    // TASK: DEFINE THE FIELDS (COLUMN NAMES) FOR THE DEPARTMENT_LIST TABLE
-    public static final String DEPARTMENT_LIST_TABLE = "DepartmentsList";
-    public static final String FIELD_id = "_id";
-    private static final String FIELD_DEPARTMENT_ID = "department_id";
-    private static final String FIELD_DEPARTMENT_INSTRUCTOR__ID = "instructor_id";
-    */
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -100,14 +87,6 @@ class DBHelper extends SQLiteOpenHelper {
                 + FIELD_F_HOURS + " TEXT" + ")";
         database.execSQL(createQuery);
 
-        /*
-        // Write the query to create the table "Department"
-        createQuery = "CREATE TABLE " + DEPARTMENT_TABLE + "("
-                + DEPARTMENT_KEY_FIELD_ID + " INTEGER PRIMARY KEY, "
-                + FIELD_DEPARTMENT_NAME + " TEXT)";
-        database.execSQL(createQuery);
-        */
-
         //TODO:  Write the query to create the relationship table "Offerings"
         //TODO:  Make sure to include foreign keys to the Courses, Departments, and Instructors tables
         createQuery = "CREATE TABLE " + OFFERINGS_TABLE + "("
@@ -119,8 +98,6 @@ class DBHelper extends SQLiteOpenHelper {
                 + COURSES_TABLE + "(" + COURSES_KEY_FIELD_ID + "), "
                 + "FOREIGN KEY(" + FIELD_INSTRUCTOR_ID + ") REFERENCES "
                 + INSTRUCTORS_TABLE + "(" + INSTRUCTORS_KEY_FIELD_ID + "))";
-                //+ "FOREIGN KEY(" + FIELD_DEPARTMENT_ID + ") REFERENCES "
-                //+ DEPARTMENT_TABLE + "(" + DEPARTMENT_KEY_FIELD_ID + "))";
 
         database.execSQL(createQuery);
 
@@ -132,7 +109,6 @@ class DBHelper extends SQLiteOpenHelper {
                           int newVersion) {
         database.execSQL("DROP TABLE IF EXISTS " + COURSES_TABLE);
         database.execSQL("DROP TABLE IF EXISTS " + INSTRUCTORS_TABLE);
-        //database.execSQL("DROP TABLE IF EXISTS " + DEPARTMENT_TABLE);
         database.execSQL("DROP TABLE IF EXISTS " + OFFERINGS_TABLE);
 
         //TODO:  Drop the Offerings table
@@ -360,21 +336,6 @@ class DBHelper extends SQLiteOpenHelper {
         return instructor;
     }
 
-    /*
-    //********** DEPARTMENT TABLE OPERATIONS:  ADD, GETALL, EDIT, DELETE
-
-    public void addDepartment(int id, String department) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-
-        values.put(DEPARTMENT_KEY_FIELD_ID, id);
-        values.put(FIELD_DEPARTMENT_NAME, department);
-
-        db.insert(DEPARTMENT_TABLE, null, values);
-
-        db.close();
-    }
-    */
 
     //********** OFFERING TABLE OPERATIONS:  ADD, GETALL, EDIT, DELETE
     //TODO:  Create the following methods: addOffering, getAllOfferings, deleteOffering

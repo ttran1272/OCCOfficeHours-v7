@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OCCOfficeHours.iml" filepath="$PROJECT_DIR$/OCCOfficeHours.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OCCOfficeHours-v7.iml" filepath="$PROJECT_DIR$/OCCOfficeHours-v7.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
