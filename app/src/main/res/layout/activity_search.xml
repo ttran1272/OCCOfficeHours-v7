@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="edu.orangecoastcollege.cs273.occofficehours.SearchActivity">
+
+    <TextView
+        android:id="@+id/searchForInstructorsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:text="@string/search_for_instructors_text"/>
+
+    <Button
+        android:id="@+id/searchInstructorsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorOccBlue"
+        android:textColor="@android:color/white"
+        android:text="@string/search_instructors"
+        android:onClick="searchInstructors"/>
+
+    <Button
+        android:id="@+id/searchCoursesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorOccBlue"
+        android:textColor="@android:color/white"
+        android:text="@string/search_courses"
+        android:onClick="searchCourses"/>
+
+    <Button
+        android:id="@+id/searchDepartmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorOccBlue"
+        android:textColor="@android:color/white"
+        android:text="@string/search_departments"
+        android:onClick="searchDepartments"/>
+
+    <TextView
+        android:id="@+id/googleMapsLinkTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom"
+        android:paddingTop="50dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/google_maps_link_text"
+        android:textColor="@color/colorOccBlue"
+        android:onClick="showMap"/>
+</LinearLayout>

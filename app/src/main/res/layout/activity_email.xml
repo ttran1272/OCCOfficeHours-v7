@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.occofficehours.EmailActivity">
+
+    <TextView
+        android:id="@+id/toTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/to"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/emailRecipientEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/toTextView"
+        android:layout_toRightOf="@id/toTextView"
+        android:ems="20"
+        android:layout_alignBottom="@id/toTextView"
+        android:padding="10dp"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Recipient@email.com"/>
+
+    <TextView
+        android:id="@+id/subjectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toTextView"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:text="@string/subject"/>
+
+    <EditText
+        android:id="@+id/emailSubjectEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/subjectTextView"
+        android:layout_below="@id/emailRecipientEditText"
+        android:layout_toEndOf="@id/subjectTextView"
+        android:layout_toRightOf="@id/subjectTextView"
+        android:ems="20"
+        android:padding="10dp"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:hint="Subject"/>
+
+    <TextView
+        android:id="@+id/contentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/contents"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/subjectTextView"/>
+
+    <EditText
+        android:id="@+id/emailMessageBodyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/contentTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:id="@+id/emailSendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailMessageBodyEditText"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="@string/compose_email_button"/>
+
+</RelativeLayout>

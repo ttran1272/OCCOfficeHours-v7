@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">OCC Office Hours</string>
+    <string name="occ_text">Orange Coast College</string>
+    <string name="splash_text">Office Hours</string>
+    <string name="filter_by_instructor_text">Filter By Instructor:</string>
+    <string name="filter_by_course_text">Filter By Course:</string>
+    <string name="filter_by_department_text">Filter By Department:</string>
+    <string name="button_reset_text">Reset</string>
+    <string name="search_for_instructors_text">Search for instructors:</string>
+    <string name="google_maps_link_text">Find OCC on Google Maps</string>
+    <string name="search_instructors">Search Instructors</string>
+    <string name="search_courses">Search Courses</string>
+    <string name="search_departments">Search Departments</string>
+    <string name="occ_name_text">Orange Coast College</string>
+    <string name="occ_address_text">2701 Fairview Rd, Costa Mesa, CA 92626</string>
+    <string name="office_hours_text">Office Hours: </string>
+    <string name="monday_text">Mon: </string>
+    <string name="tuesday_text">Tues: </string>
+    <string name="wednesday_text">Wed: </string>
+    <string name="thursday_text">Thurs: </string>
+    <string name="friday_text">Fri: </string>
+
+    <string name="make_reservation_button">Make Reservation</string>
+    <string name="make_reservation">Make Reservation</string>
+    <string name="from">From: </string>
+    <string name="to">To: </string>
+    <string name="subject">Subject: </string>
+    <string name="subject_content">Make reservation for office hour</string>
+    <string name="contents">CONTENTS:</string>
+    <string name="body_message">I would like to make a reservation for office hour on </string>
+    <string name="compose_email_button">COMPOSE EMAIL</string>
+
+</resources>
