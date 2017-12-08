@@ -19,6 +19,7 @@ public class SearchByInstructorActivity extends AppCompatActivity {
 
     private DBHelper db;
     private List<Instructor> allInstructorsList;
+
     private List<Offering> allOfferingsList;
     private List<Offering> filteredOfferingsList;
     private OfferingListAdapter offeringListAdapter;

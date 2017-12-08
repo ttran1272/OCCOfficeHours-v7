@@ -37,9 +37,9 @@ public class SearchByCourseActivity extends AppCompatActivity {
 
     deleteDatabase(DBHelper.DATABASE_NAME);
     db = new DBHelper(this);
-        db.importCoursesFromCSV("courses.csv");
-        db.importInstructorsFromCSV("instructors2.csv");
-        db.importOfferingsFromCSV("offerings.csv");
+    db.importCoursesFromCSV("courses.csv");
+    db.importInstructorsFromCSV("instructors2.csv");
+    db.importOfferingsFromCSV("offerings.csv");
 
     allOfferingsList = db.getAllOfferings();
     filteredOfferingsList = new ArrayList<>(allOfferingsList);

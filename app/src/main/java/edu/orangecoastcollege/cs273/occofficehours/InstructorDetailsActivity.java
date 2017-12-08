@@ -76,44 +76,54 @@ public class InstructorDetailsActivity extends AppCompatActivity {
         final Intent newIntent = new Intent(InstructorDetailsActivity.this, EmailActivity.class);
         newIntent.putExtra("Recipient", email);
 
-        mondayBotton.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-                // Start EmailActivity.class
-                newIntent.putExtra("Monday", monday);
-                startActivity(newIntent);
-            }
-        });
+        if (!monday.equals("NA")) {
+            mondayBotton.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+                    // Start EmailActivity.class
+                    newIntent.putExtra("Monday", monday);
+                    startActivity(newIntent);
+                }
+            });
+        }
 
-        tuesdayBotton.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-                // Start EmailActivity.class
-                newIntent.putExtra("Tuesday", tuesday);
-                startActivity(newIntent);
-            }
-        });
+        if (!tuesday.equals("NA")) {
+            tuesdayBotton.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+                    // Start EmailActivity.class
+                    newIntent.putExtra("Tuesday", tuesday);
+                    startActivity(newIntent);
+                }
+            });
+        }
 
-        wednesdayBotton.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-                // Start EmailActivity.class
-                newIntent.putExtra("Wednesday", wednesday);
-                startActivity(newIntent);
-            }
-        });
+        if (!wednesday.equals("NA")) {
+            wednesdayBotton.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+                    // Start EmailActivity.class
+                    newIntent.putExtra("Wednesday", wednesday);
+                    startActivity(newIntent);
+                }
+            });
+        }
 
-        thursdayBotton.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-                // Start EmailActivity.class
-                newIntent.putExtra("Thursday", thursday);
-                startActivity(newIntent);
-            }
-        });
+        if (!thursday.equals("NA")) {
+            thursdayBotton.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+                    // Start EmailActivity.class
+                    newIntent.putExtra("Thursday", thursday);
+                    startActivity(newIntent);
+                }
+            });
+        }
 
-        fridayBotton.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg0) {
-                // Start EmailActivity.class
-                newIntent.putExtra("Friday", friday);
-                startActivity(newIntent);
-            }
-        });
+        if (!friday.equals("NA")) {
+            fridayBotton.setOnClickListener(new OnClickListener() {
+                public void onClick(View arg0) {
+                    // Start EmailActivity.class
+                    newIntent.putExtra("Friday", friday);
+                    startActivity(newIntent);
+                }
+            });
+        }
     }
 }
